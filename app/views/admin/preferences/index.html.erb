@@ -1,0 +1,8 @@
+<h1>Preferences</h1>
+<%= form_for @preferences, url: 'admin/preferences' do |f| %>
+  <%= f.label "Create Artists" %>
+  <%= f.check_box :allow_create_artists %><br>
+  <%= f.label "Create Songs" %>
+  <%= f.check_box :allow_create_songs %><br>
+  <%= f.submit "Set Preferences" %>
+<% end %>
