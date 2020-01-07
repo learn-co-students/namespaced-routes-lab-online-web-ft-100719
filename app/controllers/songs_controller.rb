@@ -25,6 +25,9 @@ class SongsController < ApplicationController
   end
 
   def new
+    if !Preference.all.first.allow_create_songs
+      redirect_to songs_path
+    end 
     @song = Song.new
   end
 
